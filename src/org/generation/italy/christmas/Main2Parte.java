@@ -13,9 +13,12 @@ public class Main2Parte {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("dimmi una parola:");
 		String word = sc.nextLine();
+		
 		List<String> letters = new ArrayList<>();
-		for(int i =0;i<word.length();i++) {
-			letters.add(word);
+		letters.add(word);
+		for (int x=0;x<letters.size();x++) {
+			
+			String str = letters.get(x);
 		}
 		System.out.print(letters);
 		
