@@ -23,6 +23,7 @@ public class Main {
 		}
 	public static void main(String[] args) {
 		
+		String Vocals = "aeiou";
 		Scanner sc = new Scanner(System.in);
 		List<String> gifts = new ArrayList<>();
 		
@@ -43,7 +44,7 @@ public class Main {
 		Collections.sort(gifts);
 		System.out.println(gifts);
 		System.out.print("----------------------------");
-		Collections.frequency(gifts, "aeiou");
+		Collections.frequency(gifts, Vocals);
 		
 	}
 
