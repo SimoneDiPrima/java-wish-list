@@ -1,42 +1,45 @@
 package org.generation.italy.christmas;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Main2Parte {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("dimmi una parola:");
-		String word = sc.nextLine();
+		String sentence = sc.nextLine();
 		
-		List<String> letters = new ArrayList<>();
-		letters.add(word);
-		for (int x=0;x<letters.size();x++) {
+		Set<Character>charter = new HashSet<>();
+		
+		for (char c : sentence.toCharArray()) {
 			
-			String str = letters.get(x);
+			charter.add(c);
 		}
-		System.out.print(letters);
+		System.out.print(charter);
+		
 		
 		System.out.print("\n------------------------------------");
 		
 		Scanner sc2 = new Scanner(System.in);
 		System.out.print("dimmi una parola:");
 		String word2 = sc.nextLine();
-		Map<Integer,String> map = new HashMap<>();
+		Map<Character,Integer> charFreq = new HashMap<>();
 		
-		for(Integer key: map.keySet()) {
-			
-		map.put(5, word2);
-		System.out.println(map);
+		for(Character c : word2.toCharArray()) {
+			if(charFreq.containsKey(c)) {
+				int oldFreq = charFreq.get(c);
+				charFreq.put(c, oldFreq+1);
+			}else {
+				charFreq.put(c, 1);
+			}
 		
-		String value = map.get(key);
-		
-		System.out.println(key + " --> " + value);
 	}
+		System.out.println(charFreq);
 	}
 }

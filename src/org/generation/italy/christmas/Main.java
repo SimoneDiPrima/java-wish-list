@@ -23,7 +23,7 @@ public class Main {
 		}
 	public static void main(String[] args) {
 		
-		String Vocals = "aeiou";
+		String[] Vocals = {"a","e","i","o","u"};
 		Scanner sc = new Scanner(System.in);
 		List<String> gifts = new ArrayList<>();
 		
